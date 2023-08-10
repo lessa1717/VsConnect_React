@@ -6,7 +6,7 @@ function Login() {
     return (
         <div>
            
-            <main>
+            <main id="tela_login">
                 <div className="container container_login">
                     <div className="login_conteudo">
                         <h1>Login</h1>

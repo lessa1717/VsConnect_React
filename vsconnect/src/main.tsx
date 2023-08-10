@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ListaServicos from './pages/ListaServicos/index';
+
 
 
 
 //componentes
 import Home from "./pages/Home/";
+import ListaServicos from './pages/ListaServicos/index';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './pages/Login/index';
@@ -27,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/listarServicos' element={<ListaServicos />} />
-        <Route path='/' element={<Login />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
       <Footer /> {/* Renderiza o footer fora das Rotas */}
     </Router>
