@@ -1,5 +1,10 @@
+import iconFace from "../../assets/images/facebook.svg";
+import iconInsta from "../../assets/images/instagram.svg";
+import iconLinkedin from "../../assets/images/linkedin.svg";
+import imgLogo from "../../assets/images/logo.svg"
+import imgDev from "../../assets/images/dev.png";
 
-
+import "./style.css";
 
 function Footer(){
     return (

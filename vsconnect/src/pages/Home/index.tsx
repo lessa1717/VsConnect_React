@@ -1,3 +1,9 @@
+// Chamando componentes (Header/Footer)
+// import Header from "../../components/Header";
+// import Footer from "../../components/Footer";
+
+
+
 //estilização
 import "./style.css";
 
@@ -10,6 +16,7 @@ import imgDev from "../../assets/images/dev.png";
 import iconFace from "../../assets/images/facebook.svg";
 import iconInsta from "../../assets/images/instagram.svg";
 import iconLinkedin from "../../assets/images/linkedin.svg";
+import imgBanner_background from "../../assets/images/banner-background.png"
 
 function Home() {
 
@@ -20,8 +27,8 @@ function Home() {
     return (
         <div>
             <div id="sombra"></div>
-            <header></header>
-            <main id="main">
+            {/* <Header /> */}
+            <main id="main_home">
                 <h1>página inicial VSconnect</h1>
                 <section className="banner">
                     <div className="banner_conteudo">
@@ -88,7 +95,7 @@ function Home() {
                     <a href="#">Ver mais serviços</a>
                 </section>
             </main>
-           
+            {/* <Footer /> */}
         </div>
     );
 }

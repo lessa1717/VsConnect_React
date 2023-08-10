@@ -1,3 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco: #FFFFFF;
+    --rosa: #C12D6D;
+    --azul: #0C7EAE;
+    --azulP: #060821;
+    --azulC: #182246;
+
+    --font1: 'Righteous', cursive;
+    --font2: 'Titillium Web', sans-serif;
+}
 
 #sombra {
     position: fixed;
@@ -13,13 +29,13 @@
     backdrop-filter: blur(10px);
 }
 
-#main_listaservicos .container {
+.container {
     max-width: 1400px;
     width: 90%;
     margin: 0 auto;
 }
 
-#main_listaservicos h2 {
+h2 {
     font-family: var(--font1);
     font-size: 30px;
     text-transform: uppercase;
@@ -152,10 +168,10 @@ header nav a {
 
 
 /* MAIN */
-#main_listaservicos {
+main {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
-        url("../../assets/images/banner-background.png");;
+        url("../img/background_login.png");
     min-height: calc(100vh - 339px);
     background-size: cover;
     background-repeat: no-repeat;
@@ -189,13 +205,13 @@ header nav a {
     color: var(--branco);
 }
 
-#main_listaservicos h1 {
+h1 {
     font-family: var(--font1);
     font-size: 50px;
     text-align: center;
 }
 
-#main_listaservicos hr {
+hr {
     margin: 20px auto;
     width: 80%;
     height: 4px;
@@ -340,9 +356,9 @@ header nav a {
 /* FOOTER */
 footer {
     background-color: var(--azulP);
-    background-image: 
+    /* background-image: 
         linear-gradient( #06082170, #06082170),
-        url("../img/background_footer.png");
+        url("../img/background_footer.png"); */
     background-size: cover;
     color: var(--branco);
     background-repeat: no-repeat;

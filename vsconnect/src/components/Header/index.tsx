@@ -1,4 +1,6 @@
 import imgLogo from "../../assets/images/logo.svg";
+import "./style.css";
+import { Link} from 'react-router-dom'
 
 function mostrarMenu() {
     let sombra = document.getElementById("sombra") as HTMLCanvasElement; // Obtém o elemento da sombra pelo ID
@@ -33,8 +35,9 @@ function Header (){
             <img className="header_logo" src={imgLogo} alt="" />
             <nav>
                 <div id="menu_links" className="menu_links">
-                    <a href="../Home/index.html">home</a>
-                    <a href="#">serviços</a>
+                    <a><Link to='/'>home</Link></a>
+                    <a><Link to='/listarServicos'>servicos</Link></a>
+                    
                     <a href="../CadastroDev/index.html">cadastro</a>
                 </div>
                 <a className="header_icone_login" href="../Login/index.html">
