@@ -3,6 +3,12 @@ header {
     background-color: var(--azulP);
 }
 
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .header_conteudo {
     display: flex;
     justify-content: space-between;
