@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer";
 
 
 import "./style.css";
@@ -27,7 +28,7 @@ function Login() {
                     </div>
                 </div>
             </main>
-            
+            <Footer/>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-// import Footer from "../../components/Footer";
+import Footer from "../../components/Footer";
 // import Header from "../../components/Header";
 import imgBanner_background from "../../assets/images/banner-background.png"
 
@@ -69,7 +69,7 @@ function ListaServicos() {
                     </div>
                 </div>
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
 
     )
