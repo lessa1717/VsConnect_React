@@ -13,14 +13,15 @@ function Footer(){
     <div className="container rodape">
        
         <div className="rodape_conteudo">
-            <div className="rodape_conteudo_paginas">
+            <div className="rodape_conteudo_paginas_footer">
                 <h2>Páginas</h2>
                 <ul>
-                    <li>Login</li>
-                    <li>Home</li>
-                    <li>Listar Serviços</li>
-                    <li>Cadastrar Cliente<Link to = {"/CadastroDev"}></Link></li>
-                    <li>Cadastrar Desenvolvedor</li>
+                {/* style={{ textDecoration: 'none', color:'white'}} */}
+                            <li><Link to="/Login">Login</Link></li>
+                            <li><Link to="/"  style={{ textDecoration: 'none', color:'white'}}>Home</Link></li>
+                            <li><Link to="/ListaServicos"style={{ textDecoration: 'none', color:'white'}}>Listar Serviços</Link></li>
+                            <li><Link to="/CadastroDev"  style={{ textDecoration: 'none', color:'white'}}>Cadastrar Cliente</Link></li>
+                            <li><Link to="/CadastroDev"  style={{ textDecoration: 'none', color:'white'}}>Cadastrar Desenvolvedor</Link></li>
                 </ul>
             </div>
             <img src={imgLogo} alt="" />

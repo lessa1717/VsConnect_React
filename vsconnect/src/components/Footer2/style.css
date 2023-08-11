@@ -56,7 +56,7 @@ footer {
     margin-bottom: 30px;
 }
 
-.botao_dicas {
+#botao_dicas {
     padding: 10px 50px;
     color: var(--azul);
     background-color: var(--branco);
@@ -84,9 +84,11 @@ footer {
     min-width: 250px;
 }
 
-.rodape_conteudo_paginas ul {
+.rodape_conteudo_paginas_footer2  ul li {
     font-family: var(--font2);
     font-size: 18px;
+    text-decoration: none;
+    
 }
 
 .rodape_conteudo_contatos {

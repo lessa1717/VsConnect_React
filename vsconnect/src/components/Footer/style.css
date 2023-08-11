@@ -84,9 +84,10 @@ footer {
     min-width: 250px;
 }
 
-.rodape_conteudo_paginas ul {
+.rodape_conteudo_paginas_footer ul {
     font-family: var(--font2);
     font-size: 18px;
+    text-decoration: none;
 }
 
 .rodape_conteudo_contatos {
