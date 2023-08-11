@@ -1,11 +1,13 @@
 // Chamando componentes (Header/Footer)
 // import Header from "../../components/Header";
 // import Footer from "../../components/Footer";
+import { Link} from 'react-router-dom'
 
 
 
 //estilização
 import "./style.css";
+
 
 //imagens
 import imgLogo from "../../assets/images/logo.svg";
@@ -17,6 +19,7 @@ import iconFace from "../../assets/images/facebook.svg";
 import iconInsta from "../../assets/images/instagram.svg";
 import iconLinkedin from "../../assets/images/linkedin.svg";
 import imgBanner_background from "../../assets/images/banner-background.png"
+import Footer2 from '../../components/Footer2';
 
 function Home() {
 
@@ -37,8 +40,8 @@ function Home() {
                             oportunidades.</p>
                         <p className="banner_slogan_l3">Conecte-se e comece a desvendar esse mundo!</p>
                         <div className="banner_botoes">
-                            <a className="botao banner_botao_dev" href="#">desenvolvedor</a>
-                            <a className="botao banner_botao_cli" href="#">cliente</a>
+                            <a className="botao banner_botao_dev" ><Link to={"/CadastroDev"}>desenvolvedor</Link></a>
+                            <a className="botao banner_botao_cli" ><Link to={"/CadastroServ"}>cliente</Link></a>
                         </div>
                     </div>
                 </section>
@@ -95,7 +98,7 @@ function Home() {
                     <a href="#">Ver mais serviços</a>
                 </section>
             </main>
-            {/* <Footer /> */}
+            <Footer2 />
         </div>
     );
 }

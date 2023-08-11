@@ -1,8 +1,11 @@
 import "./style.css";
 import React from "react"; // Importando o módulo React
+import Footer from "../../components/Footer";
+
 
 function CadastroDev() {
     return (
+        <>
         <main id="main_cadastro">
             <div className="container container_cad">
                 <div className="cad_conteudo">
@@ -123,6 +126,8 @@ function CadastroDev() {
                 </div>
             </div>
         </main>
+      <Footer/>
+      </>
     );
 }
 
