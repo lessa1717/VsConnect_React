@@ -75,7 +75,9 @@ footer {
 }
 
 .rodape_conteudo h2 {
-    font-size: 24px;
+    font-size: 30px;
+    font-family: var(--font1);
+    text-transform: uppercase;
 }
 
 .rodape_conteudo>img {
@@ -84,10 +86,11 @@ footer {
     min-width: 250px;
 }
 
-.rodape_conteudo_paginas_footer ul {
+.rodape_conteudo_paginas_footer ul a{
     font-family: var(--font2);
     font-size: 18px;
     text-decoration: none;
+    color: (var(--branco));
 }
 
 .rodape_conteudo_contatos {

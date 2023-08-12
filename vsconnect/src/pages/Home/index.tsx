@@ -58,7 +58,7 @@ function Home() {
                                 <li>procurar por desenvolvedores</li>
                             </ul>
                             <div>
-                                <a className="botao clientes_botao_cli" href="#">criar conta</a>
+                                <a className="botao clientes_botao_cli"><Link to={"/CadastroServ"}>criar conta</Link></a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ function Home() {
                             <li>divulgar suas hardskills</li>
                         </ul>
                         <div>
-                            <a className="botao clientes_botao_devs" href="#">criar conta</a>
+                            <a className="botao clientes_botao_devs"><Link to={"/CadastroDev"}>criar conta</Link></a>
                         </div>
                     </div>
                     <img src={imgMaosDev} alt="" />
@@ -95,7 +95,7 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <a href="#">Ver mais serviços</a>
+                    <a><Link to={"/ListaServicos"}>Ver mais serviços</Link></a>
                 </section>
             </main>
             <Footer2 />

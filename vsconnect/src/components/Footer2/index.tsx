@@ -16,18 +16,18 @@ function Footer2() {
                     <div className="span_dicas_texto">
                         <p>Temos algumas dicas para o seu serviço ou freela ser um sucesso, acesse nossa página de
                             recomendações para saber mais.</p>
-                        <a id="botao botao_dicas" href="#">mais dicas</a>
+                        <a id="botao botao_dicas"><Link to={"/ListaServicos"}>mais dicas</Link></a>
                     </div>
                 </div>
                 <div className="rodape_conteudo">
                     <div className="rodape_conteudo_paginas_footer2">
                         <h2>Páginas</h2>
                         <ul>
-                            <li><Link to="/Login" style={{ textDecoration: 'none', color:'white'}}>Login</Link></li>
-                            <li><Link to="/"  style={{ textDecoration: 'none', color:'white'}}>Home</Link></li>
-                            <li><Link to="/ListaServicos"style={{ textDecoration: 'none', color:'white'}}>Listar Serviços</Link></li>
-                            <li><Link to="/CadastroDev"  style={{ textDecoration: 'none', color:'white'}}>Cadastrar Cliente</Link></li>
-                            <li><Link to="/CadastroDev"  style={{ textDecoration: 'none', color:'white'}}>Cadastrar Desenvolvedor</Link></li>
+                            <li><Link to="/Login" >Login</Link></li>
+                            <li><Link to="/"  >Home</Link></li>
+                            <li><Link to="/ListaServicos">Listar Serviços</Link></li>
+                            <li><Link to="/CadastroDev"  >Cadastrar Cliente</Link></li>
+                            <li><Link to="/CadastroDev"  >Cadastrar Desenvolvedor</Link></li>
                         </ul>
                     </div>
                     <img src={imgLogo} alt="" />

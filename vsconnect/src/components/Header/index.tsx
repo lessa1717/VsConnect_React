@@ -37,10 +37,11 @@ function Header (){
                 <div id="menu_links" className="menu_links">
                     <a><Link to='/'>home</Link></a>
                     <a><Link to='/listaServicos'>servicos</Link></a>
+                    <a><Link to='/CadastroDev'>cadastro</Link></a>
                     
                  
                     
-                    <a href="../CadastroDev/index.html">cadastro</a>
+              
                 </div>
                 <a className="header_icone_login" href="../Login/index.html">
                     <svg xmlns="http://www.w3.org/2000/svg"

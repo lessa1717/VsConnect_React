@@ -18,10 +18,10 @@ function Footer(){
                 <ul>
                 {/* style={{ textDecoration: 'none', color:'white'}} */}
                             <li><Link to="/Login">Login</Link></li>
-                            <li><Link to="/"  style={{ textDecoration: 'none', color:'white'}}>Home</Link></li>
-                            <li><Link to="/ListaServicos"style={{ textDecoration: 'none', color:'white'}}>Listar Serviços</Link></li>
-                            <li><Link to="/CadastroDev"  style={{ textDecoration: 'none', color:'white'}}>Cadastrar Cliente</Link></li>
-                            <li><Link to="/CadastroDev"  style={{ textDecoration: 'none', color:'white'}}>Cadastrar Desenvolvedor</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/ListaServicos">Listar Serviços</Link></li>
+                            <li><Link to="/CadastroDev">Cadastrar Cliente</Link></li>
+                            <li><Link to="/CadastroDev">Cadastrar Desenvolvedor</Link></li>
                 </ul>
             </div>
             <img src={imgLogo} alt="" />
