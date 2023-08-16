@@ -1,17 +1,17 @@
 //estilização
 import "./style.css";
 
-function CardDev(props: any) {
+function CardServ(props: any) {
     return (
-        <div className="dev">
-            <div className="grupo_contato">
-                <img src={props.foto} alt="" />
-                <div className="contato_dev">
-                    <h3>{props.nome}</h3>
-                    <p>{props.email}</p>
-                </div>
-            </div>
-            <div id="techs">
+        
+
+        <div className="servico">
+        <div className="topo_servico">
+            <h3>{props.titulo}</h3>
+            <span>{props.descricao}</span>
+        </div>
+        <p>{props.proposta}</p>
+        <div id="techs">
 
                 {
                     props.listaTechs.map((tech: string, indice: number) => {
@@ -27,4 +27,4 @@ function CardDev(props: any) {
     );
 }
 
-export default CardDev;
+export default CardServ;

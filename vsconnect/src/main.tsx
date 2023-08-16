@@ -11,7 +11,7 @@ import ListaServicos from './pages/ListaServicos/index';
 import Header from './components/Header';
 
 import Login from './pages/Login/index';
-import ListarDevs from './pages/ListarDev';
+import ListarDev from './pages/ListaDevs';
 import CadastroDev from './pages/CadastroDev';
 import CadastroServ from './pages/CadastroDev';
 
@@ -35,12 +35,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Header /> {/* Renderiza o header fora das Rotas */}
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/listaServicos' element={<ListaServicos />} />
+        <Route path='/ListaServicos' element={<ListaServicos />} />
         <Route path='/login' element={<Login />} />
         <Route path='/CadastroServ' element={<CadastroServ />} />
       
         <Route path='/CadastroDev' element={<CadastroDev />} />
-        <Route path='/ListarDevs' element={<ListarDevs />} />
+        <Route path='/ListarDev' element={<ListarDev />} />
         </Routes>
    
       </BrowserRouter>

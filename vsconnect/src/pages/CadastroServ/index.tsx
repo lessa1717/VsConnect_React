@@ -4,6 +4,7 @@ import "./style.css"
 
 function CadastroServ() {
     return (
+        <>
         <main className="main_cad_servico">
         <div className="container container_cad_serv">
             <div className="cad_serv_conteudo">
@@ -44,7 +45,7 @@ function CadastroServ() {
             </div>
         </div>
     </main>
-
+    </>
     )
 }
 
