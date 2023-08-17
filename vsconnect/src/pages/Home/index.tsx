@@ -1,7 +1,7 @@
 // Chamando componentes (Header/Footer)
 // import Header from "../../components/Header";
 // import Footer from "../../components/Footer";
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -29,7 +29,7 @@ function Home() {
 
     return (
         <div>
-            <div id="sombra"></div>
+
             {/* <Header /> */}
             <main id="main_home">
                 <h1>página inicial VSconnect</h1>
@@ -95,7 +95,7 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <a><Link to={"/ListaServicos"}>Ver mais serviços</Link></a>
+                    <Link to={"/ListaServicos"}>Ver mais serviços</Link>
                 </section>
             </main>
             <Footer2 />

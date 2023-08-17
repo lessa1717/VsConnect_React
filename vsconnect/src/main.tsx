@@ -6,20 +6,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 //componentes
-import Home from "./pages/Home/";
-import ListaServicos from './pages/ListaServicos/index';
-import Header from './components/Header';
-
-import Login from './pages/Login/index';
+import Home from "./pages/Home";
+import ListaServicos from './pages/ListaServicos';
+import Login from './pages/Login';
 import ListarDev from './pages/ListaDevs';
 import CadastroDev from './pages/CadastroDev';
 import CadastroServ from './pages/CadastroDev';
 
+import Header from './components/Header';
+import Footer2 from './components/Footer2';
+import Footer from './components/Footer';
 
 //estilização global
 import "./index.css";
-import Footer2 from './components/Footer2';
-import Footer from './components/Footer';
 
 
 
@@ -29,20 +28,16 @@ import Footer from './components/Footer';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
- 
-      
-      <BrowserRouter>
+    <BrowserRouter>
       <Header /> {/* Renderiza o header fora das Rotas */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ListaServicos' element={<ListaServicos />} />
         <Route path='/login' element={<Login />} />
         <Route path='/CadastroServ' element={<CadastroServ />} />
-      
         <Route path='/CadastroDev' element={<CadastroDev />} />
         <Route path='/ListarDev' element={<ListarDev />} />
-        </Routes>
-   
-      </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 );

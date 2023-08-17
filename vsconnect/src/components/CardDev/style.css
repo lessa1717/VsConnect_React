@@ -39,7 +39,7 @@
     font-size: 14px;
 }
 
-#techs {
+.dev .techs {
     width: 180px;
     flex-direction: row;
     display: flex;
@@ -47,7 +47,7 @@
     justify-content: space-between;
 }
 
-#techs span {
+.dev .techs span {
     display: flex;
     flex-direction: row;
     font-size: 14px;

@@ -3,15 +3,15 @@ import "./style.css";
 
 function CardServ(props: any) {
     return (
-        
+
 
         <div className="servico">
-        <div className="topo_servico">
-            <h3>{props.titulo}</h3>
-            <span>{props.descricao}</span>
-        </div>
-        <p>{props.proposta}</p>
-        <div id="techs">
+            <div className="topo_servico">
+                <h3>{props.titulo}</h3>
+                <span>{props.proposta}</span>
+            </div>
+            <p>{props.descricao}</p>
+            <div className="techs">
 
                 {
                     props.listaTechs.map((tech: string, indice: number) => {
