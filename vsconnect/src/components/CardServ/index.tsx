@@ -8,14 +8,14 @@ function CardServ(props: any) {
         <div className="servico">
             <div className="topo_servico">
                 <h3>{props.titulo}</h3>
-                <span>{props.proposta}</span>
+                <span>R${props.proposta}</span>
             </div>
             <p>{props.descricao}</p>
             <div className="techs">
 
                 {
-                    props.listaTechs.map((tech: string, indice: number) => {
-                        return <span key={indice}>{tech}</span>
+                    props.techs.map((techs: string, index: number) => {
+                        return <span key={index}>{techs}</span>
                     })
                 }
 

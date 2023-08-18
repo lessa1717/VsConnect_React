@@ -2,8 +2,9 @@ import iconFace from "../../assets/images/facebook.svg";
 import iconInsta from "../../assets/images/instagram.svg";
 import iconLinkedin from "../../assets/images/linkedin.svg";
 import imgLogo from "../../assets/images/logo.svg"
-import imgDev from "../../assets/images/dev.png";
+
 import { Link } from 'react-router-dom'
+import React from "react";
 
 import "./style.css";
 
