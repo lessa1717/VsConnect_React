@@ -22,6 +22,10 @@
     flex-direction: column;
     justify-content: space-around;
 }
+.contato_dev a {
+   text-decoration: none;
+   color: aliceblue;
+}
 
 .grupo_contato img {
     height: 100%;

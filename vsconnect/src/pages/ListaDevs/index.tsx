@@ -7,6 +7,7 @@ import CardDev from "../../components/CardDev";
 //hooks
 import { useEffect, useState } from "react";
 import api from "../../utils/api";
+import Footer from "../../components/Footer";
 
 
 
@@ -96,6 +97,7 @@ function ListaDevs() {
                                     devs.map((dev: any, indice: number) => {
                                         return <li key={indice}>
                                             <CardDev
+                                                id={dev.id}
                                                 foto={dev.user_img}
                                                 nome={dev.nome}
                                                 email={dev.email}
@@ -108,6 +110,7 @@ function ListaDevs() {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </main>
 
         </>
