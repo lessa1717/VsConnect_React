@@ -1,5 +1,6 @@
 //estilização
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function CardServ(props: any) {
     return (
@@ -7,14 +8,14 @@ function CardServ(props: any) {
 
         <div className="servico">
             <div className="topo_servico">
-                <h3>{props.titulo}</h3>
-                <span>R${props.proposta}</span>
+            <Link to={"/servico/" + props.id}> <h3>{props.nome}</h3></Link>
+                <span>R${props.valor}</span>
             </div>
             <p>{props.descricao}</p>
             <div className="techs">
 
                 {
-                    props.techs.map((techs: string, index: number) => {
+                    props.listaSkills.map((techs: string, index: number) => {
                         return <span key={index}>{techs}</span>
                     })
                 }

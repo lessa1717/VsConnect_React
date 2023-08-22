@@ -19,6 +19,7 @@ import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 
 //estilização global
 import "./index.css";
+import VisualizarServico from './pages/Home/VisualizarServico';
 
 
 
@@ -38,7 +39,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/CadastroDev' element={<CadastroDev />} />
         <Route path='/ListarDev' element={<ListarDev />} />
         {/*Rota com parametro, indicando o identificador do desenvolvedor*/ }
-        <Route path='/perfil/:idUsuario' element={<PerfilUsuario/>}/>
+        <Route path='perfil/:idUsuario' element={<PerfilUsuario/>}/>
+        <Route path='servico/:idServico' element={<VisualizarServico/>}/>
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

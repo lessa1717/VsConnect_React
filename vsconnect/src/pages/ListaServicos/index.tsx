@@ -97,10 +97,11 @@ function ListaServicos() {
                                     servico.map((servico: any, indice: number) => {
                                         return <li key={indice}>
                                             <CardServ
-                                                titulo={servico.nome}
+                                                id={servico.id}
+                                                nome={servico.nome}
                                                 descricao={servico.descricao}
-                                                proposta={servico.valor}
-                                                techs={servico.techs}
+                                                valor={servico.valor}
+                                                listaSkills={servico.techs}
                                             />
                                         </li>
                                     })
