@@ -12,7 +12,7 @@ import Login from './pages/Login';
 import ListarDev from './pages/ListaDevs';
 import CadastroDev from './pages/CadastroDev';
 import CadastroServ from './pages/CadastroDev';
-
+import CadastroUsuario from './pages/CadastroUsuario';
 import Header from './components/Header';
 
 import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
@@ -36,12 +36,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/ListaServicos' element={<ListaServicos />} />
         <Route path='/login' element={<Login />} />
         <Route path='/CadastroServ' element={<CadastroServ />} />
-        <Route path='/CadastroDev' element={<CadastroDev />} />
+        {/* <Route path='/CadastroDev' element={<CadastroDev />} /> */}
         <Route path='/ListarDev' element={<ListarDev />} />
         {/*Rota com parametro, indicando o identificador do desenvolvedor*/ }
         <Route path='perfil/:idUsuario' element={<PerfilUsuario/>}/>
         <Route path='servico/:idServico' element={<VisualizarServico/>}/>
-
+        <Route path='cadastro/usuario' element={<CadastroUsuario/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

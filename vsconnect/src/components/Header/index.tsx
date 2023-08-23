@@ -37,7 +37,7 @@ function Header() {
                 <div id="menu_links" className="menu_links">
                     <Link to='/'>home</Link>
                     <Link to='/listaServicos'>servicos</Link>
-                    <Link to='/CadastroDev'>cadastro</Link>
+                    <Link to='/cadastro/usuario'>cadastro</Link>
 
 
 
