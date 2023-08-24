@@ -29,6 +29,7 @@ function Footer2() {
                             <li><Link to="/ListarDev">Listar Desenvolvedores</Link></li>
                             <li><Link to="/CadastroDev"  >Cadastrar Cliente</Link></li>
                             <li><Link to="/CadastroDev"  >Cadastrar Desenvolvedor</Link></li>
+                            <li><Link to="/cadastro/servico">Cadastrar Servico</Link></li>
                         </ul>
                     </div>
                     <img src={imgLogo} alt="" />
