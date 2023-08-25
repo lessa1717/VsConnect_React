@@ -32,6 +32,11 @@
     margin-top: 6vh;
 }
 
+header nav span {
+    color: var(--branco);
+    font-size: 20px;
+}
+
 h1 {
     font-family: var(--font1);
     font-size: 50px;

@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-
+import secureLocalStorage from "react-secure-storage";
 
 
 //componentes
 import Home from "./pages/Home";
 import ListaServicos from './pages/ListaServicos';
-import Login from './pages/Login';
 import ListarDev from './pages/ListaDevs';
-import CadastroDev from './pages/CadastroDev';
 import CadastroServ from './pages/CadastroDev';
 import CadastroUsuario from './pages/CadastroUsuario';
 import Header from './components/Header';
-
+import Login from './pages/Login';
 import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 
 //estilização global
@@ -22,7 +19,15 @@ import "./index.css";
 import VisualizarServico from './pages/Home/VisualizarServico';
 import CadastroServico from './pages/CadastroServico';
 
-
+function logado(){
+  if (secureLocalStorage.getItem("user")) {
+    const objetoUsuario: any  = secureLocalStorage.getItem("user")
+    const nome: string = objetoUsuario.user.nome.trim().split(" ")[0];
+    return{logado: true,nomeUsuario : nome}
+  }else{
+    return{ logado : false, nomeUsuario: null}
+  }
+}
 
 
 
@@ -31,7 +36,7 @@ import CadastroServico from './pages/CadastroServico';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header /> {/* Renderiza o header fora das Rotas */}
+      <Header  usuario={logado()}/> {/* Renderiza o header fora das Rotas */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ListaServicos' element={<ListaServicos />} />

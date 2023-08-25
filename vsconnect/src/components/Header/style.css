@@ -8,6 +8,10 @@ header {
     width: 90%;
     margin: 0 auto;
 }
+header nav span {
+    color: var(--branco);
+    font-size: 20px;
+}
 
 .header_conteudo {
     display: flex;

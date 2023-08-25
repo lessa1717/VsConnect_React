@@ -54,7 +54,7 @@ function PerfilUsuario() {
         <main id="main_perfilusuario_dev">
             <div className="container container_perfil_dev">
                 <div className="perfil_dev_conteudo">
-                    <h1>Página de Perfil - Thiago Nascimento</h1>
+                    <h1>Página de Perfil - {nome}</h1>
 
                     <div className="topo_dev">
                         <img src={"http://localhost:3000/static/" + foto} alt={"Foto de perfil de " + nome} 
@@ -65,7 +65,7 @@ function PerfilUsuario() {
                     <div className="contato_local">
                         <div className="contato">
                             <p>Email para contato: </p>
-                            <Link to={"mailto:c" +email}>thiago@email.com</Link>
+                            <Link to={"mailto:c" +email}>{email}</Link>
                         </div>
                         <div className="local">
                             <svg
