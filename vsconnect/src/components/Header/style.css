@@ -118,5 +118,10 @@ header nav a {
 .header_icone_login{
     display: none;
 }
+.contato_local svg {
+    width: 20px;
+    fill: white;
+    margin-right: 10px;
+}
 
 

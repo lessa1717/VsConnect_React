@@ -137,3 +137,14 @@
     width: 35px;
     fill: var(--branco);
 }
+
+#main_perfilusuario a {
+    width: 35px;
+    fill: var(--branco);
+}
+
+.techs svg{
+    width: 35px;
+    fill: var(--branco);
+    margin-left: 900px;
+}

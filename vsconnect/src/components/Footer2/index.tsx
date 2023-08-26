@@ -27,8 +27,8 @@ function Footer2() {
                             <li><Link to="/"  >Home</Link></li>
                             <li><Link to="/ListaServicos">Listar Serviços</Link></li>
                             <li><Link to="/ListarDev">Listar Desenvolvedores</Link></li>
-                            <li><Link to="/CadastroDev"  >Cadastrar Cliente</Link></li>
-                            <li><Link to="/CadastroDev"  >Cadastrar Desenvolvedor</Link></li>
+                            <li><Link to="/cadastro/servico"  >Cadastrar Cliente</Link></li>
+                            <li><Link to="/cadastro/servico"  >Cadastrar Desenvolvedor</Link></li>
                             <li><Link to="/cadastro/servico">Cadastrar Servico</Link></li>
                         </ul>
                     </div>

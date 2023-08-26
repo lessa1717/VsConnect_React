@@ -9,7 +9,8 @@ import api from "../../../utils/api";
 
 //estilização
 import "./style.css";
-
+import secureLocalStorage from "react-secure-storage";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -17,7 +18,10 @@ import "./style.css";
 function PerfilUsuario() {
 
 
-    const { idUsuario} = useParams();
+    const { idUsuario } = useParams();
+
+
+    const navigate = useNavigate();
 
     const [nome, setNome] = useState<string>("");
     const [foto, setFoto] = useState<string>("");
@@ -27,28 +31,44 @@ function PerfilUsuario() {
     const [listaSkills, setListaSkills] = useState<string[]>([]);
 
 
-    function  buscarUsuarioPorID(){
+    function buscarUsuarioPorID() {
         //Estrutura Básica para consumir API
-        api.get("users/" +idUsuario)
-        .then((response: any) => {
-          console.log(response);
+        api.get("users/" + idUsuario)
+            .then((response: any) => {
+                console.log(response);
 
-          //Seta os valores referente as informcoes do usurario
-          setNome(response.data.nome);
+                //Seta os valores referente as informcoes do usurario
+                setNome(response.data.nome);
                 setFoto(response.data.user_img);
                 setEmail(response.data.email);
                 setCidade(response.data.cidade);
                 setUf(response.data.uf);
                 setListaSkills(response.data.hardSkills);
-          
-        })
-        .catch((error: any) => console.log(error));
-        
+
+                if (typeof response.data.hardSkills === "string") {
+                    return setListaSkills(JSON.parse(response.data.hardSkills));
+                } else {
+                    return setListaSkills(response.data.hardSkills);;
+                }
+
+            })
+            .catch((error: any) => console.log(error));
+
     }
-    useEffect(()=> {
+
+    function deslogar() {
+        console.log(secureLocalStorage.getItem("user"));
+        secureLocalStorage.removeItem("user");
+        navigate("/");
+        navigate(0);
+
+    }
+
+
+    useEffect(() => {
         buscarUsuarioPorID();
     },
-    [])
+        [])
 
     return (
         <main id="main_perfilusuario_dev">
@@ -57,7 +77,7 @@ function PerfilUsuario() {
                     <h1>Página de Perfil - {nome}</h1>
 
                     <div className="topo_dev">
-                        <img src={"http://localhost:3000/static/" + foto} alt={"Foto de perfil de " + nome} 
+                        <img src={"http://localhost:3000/static/" + foto} alt={"Foto de perfil de " + nome}
                         />
                         <h2>{nome}</h2>
                     </div>
@@ -65,7 +85,7 @@ function PerfilUsuario() {
                     <div className="contato_local">
                         <div className="contato">
                             <p>Email para contato: </p>
-                            <Link to={"mailto:c" +email}>{email}</Link>
+                            <Link to={"mailto:c" + email}>{email}</Link>
                         </div>
                         <div className="local">
                             <svg
@@ -81,26 +101,39 @@ function PerfilUsuario() {
                     </div>
 
                     <div className="techs">
+
                         <p>Tecnologias principais: </p>
                         <div className="lista_skills">
                             {
                                 listaSkills.map((
                                     tech: string,
                                     index: number,) => {
-                                        return <span key={index}>{tech}</span>
-                                    })
+                                    return <span key={index}>{tech}</span>
+                                })
 
 
                             }
                             {/* <span>HTML</span>
                             <span>CSS</span>
                             <span>React</span> */}
+                          
+                                <Link to={"/login"} onClick={deslogar}>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512">{/*  Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
+                                        <path
+                                            d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                                    </svg>
+                                </Link>
+                            
                         </div>
+
                     </div>
+
 
                 </div>
             </div>
             <Footer />
+
         </main>);
 }
 
